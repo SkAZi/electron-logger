@@ -11,7 +11,7 @@ class Format
     
   getTime: ()->
     time = new Date()
-    return "#{time.getHours()}:#{time.getMinutes()}:#{time.getSeconds()}:#{time.getMilliseconds()}"
+    return "#{time.toISOString()}"
 
   getInfoStack: ()->
     s = (new Error()).stack.split('\n')[5]
